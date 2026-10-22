@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hypelabs-connect"
+version = "0.1.0"
+description = "The Python client for the HypeLabs Connect API."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "microsoft-kiota-bundle==1.15.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/hypelabs-llc/python-sdk"
+Repository = "https://github.com/hypelabs-llc/python-sdk"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hypelabs_connect"]
+exclude = ["**/.kiota.log", "**/kiota-lock.json"]
